@@ -6,10 +6,10 @@
 name: Kaio Magalhães
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Brasil
+description: Web Developer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars2.githubusercontent.com/u/1529246?v=3&s=460
+avatar:  /assets/images/profile.jpg
 
 #
 # Flags below are optional
@@ -27,10 +27,10 @@ footer-links:
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: 
+  curriculum: https://www.dropbox.com/s/6udar5dbt0vz0jw/Curriculo.doc?dl=0
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
-
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
