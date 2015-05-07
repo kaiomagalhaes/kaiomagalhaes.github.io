@@ -4,9 +4,9 @@ title: About me
 permalink: /about/
 ---
 
-Software developer since 2012 i worked on several projects, both desktop and web. Today i focus on web solutions, always searching for the best for the final user. I do Software Engineering in Universidade Federal de Goiás - Brasil and besides programming i love economic and administrative issues.
+I've been working as a software developer since 2012, for both the desktop and the web. My current focus is on web solutions, always focusing on providing the best experience for the user.I'm a Software Engineering major at UFG - Universidade Federal de Goiás.
 
-For me programming is not just work, it's my profession and something i do for love.
+For me, programming is more than just a profession: it's a way of life, It's something I love
 
 Programming is the way to do that which makes things make sense, which is to deliver a product with clean code , well structured and well tested.
 
@@ -25,10 +25,12 @@ I have the chance to work with great developers with which i learned to work agi
 
 In addition to programming also had the chance to work with management and automation servers.
 
+## Front end skills
+![_config.yml]({{ site.baseurl }}/images/html.png)
+![_config.yml]({{ site.baseurl }}/images/css.png)
+![_config.yml]({{ site.baseurl }}/images/javascript.jpg)
 
-
-
-A place to include any other types of information that you'd like to include about yourself.
+A interface com o usuário simplesmente me encanta. Afinal a forma é feita delimita toda a experiência, estado e futuro de um sistema. Tive a chance de trabalhar com vários frameworks que vão desde estilos da página até efeitos. Trabalhei não só na construção de interfaces como nos testes das mesmas, testes automatizados de comportanto e de estado para front end.
 
 ### Contact me
 
