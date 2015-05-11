@@ -26,9 +26,7 @@ I have the chance to work with great developers with which i learned to work agi
 In addition to programming also had the chance to work with management and automation servers.
 
 ## Front end skills
-![_config.yml]({{ site.baseurl }}/images/html.png)
-![_config.yml]({{ site.baseurl }}/images/css.png)
-![_config.yml]({{ site.baseurl }}/images/javascript.jpg)
+![_config.yml]({{ site.baseurl }}/front/html.png)
 
 A interface com o usuário simplesmente me encanta. Afinal a forma é feita delimita toda a experiência, estado e futuro de um sistema. Tive a chance de trabalhar com vários frameworks que vão desde estilos da página até efeitos. Trabalhei não só na construção de interfaces como nos testes das mesmas, testes automatizados de comportanto e de estado para front end.
 
