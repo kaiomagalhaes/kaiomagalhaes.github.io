@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    {% include meta.html %}
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  {% include meta.html %}
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -32,15 +32,13 @@
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
-    <div class="wrapper-footer">
-      <div >
-        <footer class="footer">
-          <div class="text-center">
-            <small class="copyright">Kaio Magalhães - 2015. Todos os direitos reservados</small>
-          </div>
-        </footer>
-      </div>
+    <div >
+      <footer class="footer navbar-bottom">
+        <div class="text-center">
+          <small class="copyright">Kaio Magalhães - 2015. Todos os direitos reservados</small>
+        </div>
+      </footer>
     </div>
     {% include analytics.html %}
   </body>
-</html>
+  </html>
