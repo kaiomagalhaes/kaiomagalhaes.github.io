@@ -4,13 +4,13 @@ title: About me
 permalink: /about/
 ---
 
-I've been working as a software developer since 2012, for both the desktop and the web. My current focus is on web solutions, always focusing on providing the best experience for the user.I'm a Software Engineering major at UFG - Universidade Federal de Goiás.
+Trabalho como desenvolvedor de software desde o inicio de 2012, tanto para desktop como web. Meu foco atual está em soluções web, sempre buscando a melhor experiência para o usuario e o menor custo para o cliente. Faço Engenharia de software na Universidade Federal de Goiás onde irei formar no primeiro semestre de 2016.
 
-For me, programming is more than just a profession: it's a way of life, It's something I love
+Para mim, programação é mais do que uma profissão: É um modo de vida, é algo que eu faço por amor.
 
-Programming is the way to do that which makes things make sense, which is to deliver a product with clean code , well structured and well tested.
+Faço sempre buscando aquilo que faz sentido pra mim, que é entregar um produto com código limpo, bem estruturado e bem testado.
 
-In my spare time when i not programming i like to read, cook and play sports in general.
+Em meu tempo livre quando não estou programando eu gosto de ler, cozinhar e praticar esportes no geral.
 
 ## Back end skills
 ![_config.yml]({{ site.baseurl }}/images/ruby.jpg)
@@ -18,18 +18,14 @@ In my spare time when i not programming i like to read, cook and play sports in 
 ![_config.yml]({{ site.baseurl }}/images/groovy.jpg)
 ![_config.yml]({{ site.baseurl }}/images/nodejs.png)
 
-Most of my time as a programmer was invested in back end development, mostly because of the jobs that i picked. I started as a Java programmer, after o work with Groovy, Groovy on Grails and NodeJS.
-Today i use ruby in most of my personal projects (you can see them [here](https://github.com/kaiomagalhaes))
+A maior parte do meu tempo como programador foi investida em desenvolvimento back end, em sua maioria por causa dos trabalhos que eu peguei pra fazer. Comecei como programador Java, após trabalhei com Groovy, Groovy And Grails e NodeJS.
+Hoje trabalho com Ruby na maioria dos meus projetos pessoais(you can see them [here](https://github.com/kaiomagalhaes)
 
-I have the chance to work with great developers with which i learned to work agile methodologies and that a team that talk can make anything possible(including laughing solving bugs that can make the whole team fired)
+Tive a chance de trabalhar com grandes desenvolvedores com os quais tive a chance de aprender não só metodologias ágeis como também que um tive que conversa entre si pode fazer qualquer coisa(incluindo rir enquanto resolve bugs que podem fazer com que todo o time seja despedido) 
 
-In addition to programming also had the chance to work with management and automation servers.
+Tive a oportunidade de aprender SCRUM, TDD, BDD e a trabalhar com servidores Linux tanto em controle de ambientes(desenvolvimento/testes/produção) como também com ferramentas de automatização e de entrega continua.
 
 ## Front end skills
 ![_config.yml]({{ site.baseurl }}/images/front.png)
 
-A interface com o usuário simplesmente me encanta. Afinal a forma é feita delimita toda a experiência, estado e futuro de um sistema. Tive a chance de trabalhar com vários frameworks que vão desde estilos da página até efeitos. Trabalhei não só na construção de interfaces como nos testes das mesmas, testes automatizados de comportanto e de estado para front end.
-
-### Contact me
-
-[contato@kaiomagalhaes.com.br](mailto:contato@kaiomagalhaes.com.br)
+A interface com o usuário simplesmente me encanta. Afinal a forma é feita delimita toda a experiência, estado e futuro de um sistema. Tive a chance de trabalhar com vários frameworks: AngularJS, Twitter Bootstrap, Jquery entre outros. Trabalhei não só na construção de interfaces como nos testes das mesmas: testes automatizados de comportanto e de estado.
