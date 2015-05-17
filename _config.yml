@@ -71,6 +71,8 @@ gems:
 collections:
   works:
     output: true
+  contact:
+    output: true
 
 # Exclude these files from your production _site
 exclude:
