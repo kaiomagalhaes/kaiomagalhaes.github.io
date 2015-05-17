@@ -1,8 +1,6 @@
 $(document).ready(function(){
-
 	var plusClass = ".plus";
 	var minusClass = ".minus";
-
 	$(plusClass).on("click",function(){
 		var self = $(this);
 		self.siblings('.text-more').show()
