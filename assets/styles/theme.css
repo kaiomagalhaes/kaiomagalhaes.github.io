@@ -5,9 +5,9 @@
  * Twitter: @3rdwave_themes
  * License: Creative Commons Attribution 3.0 License
  * Website: http://themes.3rdwavemedia.com/
-*/
-/* ======= Base ======= */
-body {
+ */
+ /* ======= Base ======= */
+ body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
   /*background: #dae3e7;*/
@@ -566,3 +566,25 @@ body {
   left: 0;
   padding: 1rem;
 }
+
+
+/*Images WORK*/
+
+#container-works {
+  margin-top: 25px
+}
+
+.text-more {
+  display: none
+}
+
+.plus , .minus{
+    cursor:pointer;
+    color: blue;
+}
+
+.minus{
+  display: none
+}
+
+

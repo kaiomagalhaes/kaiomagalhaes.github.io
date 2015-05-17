@@ -68,6 +68,10 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
 
+collections:
+  works:
+    output: true
+
 # Exclude these files from your production _site
 exclude:
     - Gemfile
