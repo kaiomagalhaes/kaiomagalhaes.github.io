@@ -9,3 +9,22 @@ layout: default
 		<span> Sistema de calculo, armazenamento e exibição do indice de preço</span> <i class="plus">more...</i> <span class="text-more">Encomendando pela faculdade de Agronomia da Universidade Federal de Goiás com o objetivo de disponibilizar para o público o valor do indice dos preços dos hortifrutis.<br/> <a target="_blank"href="https://github.com/kaiomagalhaes/ppagronegocio-indice-precos">Código disponivel</a><br/></span><i class="minus"> less...</i>
 	</div>
 </div>
+<script>
+$(document).ready(function(){
+	var plusClass = ".plus";
+	var minusClass = ".minus";
+	$(plusClass).on("click",function(){
+		var self = $(this);
+		self.siblings('.text-more').show()
+		self.hide()
+		$(minusClass).show();
+	});
+
+	$(minusClass).on("click",function(){
+		var self = $(this);
+		self.siblings('.text-more').hide()
+		self.hide()
+		$(plusClass).show();
+	});
+})
+</script>

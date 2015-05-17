@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/assets/styles/theme.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <script src="{{ site.baseurl }}/assets/javascripts/jquery.js"></script>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
   <body>
@@ -32,16 +33,12 @@
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
-    <div >
       <footer class="footer navbar-bottom">
         <div class="text-center">
           <small class="copyright">Kaio Magalhães - 2015. Todos os direitos reservados</small>
         </div>
       </footer>
-    </div>
     {% include analytics.html %}
-    <script src="{{ site.baseurl }}/assets/javascripts/jquery.js"></script>
-    <script src="{{ site.baseurl }}/assets/javascripts/theme.js"></script>
   </body>
   
   </html>
