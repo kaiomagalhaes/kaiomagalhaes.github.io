@@ -22,4 +22,4 @@ I've had the chance to work with great developers, with whom I had the chance to
 ## Front end skills
 ![_config.yml]({{ site.baseurl }}/images/front.png)
 
-The user interface, to me, is astouding. After all, its the UI that guides the whole experience. I've had the chance to work with various front-end frameworks, such as AngularJS, Twitter Bootstrap, jQuery, and others. I also have experience writing up automatic interface, behaviour and state tests.
+The user interface, for me, is astouding. After all, its the UI that guides the whole experience. I've had the chance to work with various front-end frameworks, such as AngularJS, Twitter Bootstrap, jQuery, and others. I also have experience writing up automatic interface, behaviour and state tests.
