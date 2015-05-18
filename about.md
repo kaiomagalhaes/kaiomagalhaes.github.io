@@ -7,7 +7,7 @@ I've been working as a software developer since early 2012, for both the desktop
 
 Programming is more than just a profession for me, it's a lifestyle, something I do out of love for my craft. I always strive for a well made product, with a good architecture and a clean, well tested code.
 
-When i'm not programming, I like to read, cook, and practice sports in general.
+When I'm not programming, I like to read, cook, and practice sports in general.
 
 ## Back end skills
 ![_config.yml]({{ site.baseurl }}/images/ruby.jpg)
@@ -22,4 +22,4 @@ I've had the chance to work with great developers, with whom I had the chance to
 ## Front end skills
 ![_config.yml]({{ site.baseurl }}/images/front.png)
 
-The user interface, for me, is astouding. After all, its the UI that guides the whole experience. I've had the chance to work with various front-end frameworks, such as AngularJS, Twitter Bootstrap, jQuery, and others. I also have experience writing up automatic interface, behaviour and state tests.
+The user interface, for me, is astounding. After all, its the UI that guides the whole experience. I've had the chance to work with various front-end frameworks, such as AngularJS, Twitter Bootstrap, jQuery, and others. I also have experience writing up automatic interface, behaviour and state tests.
