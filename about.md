@@ -15,7 +15,7 @@ When I'm not programming, I like to read, cook, and practice sports in general.
 ![_config.yml]({{ site.baseurl }}/images/groovy.jpg)
 ![_config.yml]({{ site.baseurl }}/images/nodejs.png)
 
-Most of my time as a programmer has been spent in back-end development. I started as a java programmer at first, moving on to groovy  and nodejs. Today, my language of choice for personal projects (which you can see [here](https://github.com/kaiomagalhaes)).
+Most of my time as a programmer has been spent in back-end development. I started as a java programmer at first, moving on to groovy  and nodejs. Today, my language of choice for personal projects (which you can see [here](https://github.com/kaiomagalhaes)) is Ruby.
 
 I've had the chance to work with great developers, with whom I had the chance to not only practice agile methods but also to learn that talking with your peers can help you solve most of your problems. I've also had the oportunity to learn scrum, tdd, bdd and dev-ops.
 
