@@ -17,20 +17,13 @@ avatar:  /assets/images/profile.jpg
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
   email: contato@kaiomagalhaes.com.br
-  facebook: kaio.porto.magalhaes
-  flickr:
   github: kaiomagalhaes
-  instagram:
   linkedin: kaiomagalhaes
-  pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: 
   curriculum: https://www.dropbox.com/s/6udar5dbt0vz0jw/Curriculo.doc?dl=0
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
