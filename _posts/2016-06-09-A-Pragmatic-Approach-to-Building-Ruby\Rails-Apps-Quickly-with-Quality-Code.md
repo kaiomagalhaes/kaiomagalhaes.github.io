@@ -1,3 +1,5 @@
+This post appeared first [here](http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/)
+
 Startups often place priority with speed over nearly everything. They move at astronomical speed so they can hurry into the market for proper validation. Startups product code bases or features usually fall into two categories because of this:
 
 **In production/maintain it or under active development**
