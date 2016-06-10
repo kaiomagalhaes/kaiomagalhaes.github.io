@@ -1,0 +1,13 @@
+---
+layout: page
+title: About
+---
+
+
+<h4>Hi!</h4><p>So you want to talk to me?? ok ok, we can do it.</p>
+
+<p>I'm easily found on <b>email:</b> <a
+href="mailto:contact@kaiomagalhaes.com">contact@kaiomagalhaes.com</a></p>
+
+-Don't worry about speed, I'm always attentive to my emails so I
+will answer as soon as possible.
