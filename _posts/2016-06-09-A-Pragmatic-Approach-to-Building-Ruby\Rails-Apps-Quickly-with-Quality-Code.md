@@ -81,7 +81,7 @@ These act as a watchdog for us. Even engineers with years of experience make sma
 
 Rubycritic is another static code analyzer, it wraps around the static analysis gems [Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog). We mainly use this gem because it offers an overview of the duplicated code and complexity, as you can see in the report below:
 
-{<1>}![alt text](/blog/content/images/2016/05/5227312822353920.png)
+{<1>}![alt text](https://raw.githubusercontent.com/kaiomagalhaes/kaiomagalhaes.github.io/master/_posts/images/code_quality.png)
 
 We care a lot about the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle and the report that this gem offers is really helpful to make sure we're not over complicating things or duplicating functionality throughout the code base.
 
