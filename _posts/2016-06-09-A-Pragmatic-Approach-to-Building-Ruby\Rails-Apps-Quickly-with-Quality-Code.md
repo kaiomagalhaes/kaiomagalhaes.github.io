@@ -1,5 +1,5 @@
 ---
-canonical-url: http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code
+canonical: http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code
 ---
 
 (This post appeared first [here](http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/))
