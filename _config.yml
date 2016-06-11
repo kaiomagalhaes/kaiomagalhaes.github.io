@@ -1,9 +1,5 @@
 url: "http://kaiomagalhaes.com"
-<<<<<<< HEAD
 baseurl: ""
-=======
-baseurl: "/"
->>>>>>> 6eb0318abba6ed72daeb2504232a015a36a841ce
 
 title: Kaio Magalhães
 description: A Software Engineer!
@@ -29,7 +25,7 @@ footer-links-active:
   linkedin: true
   stackoverflow: false
 
-url-pretty: "me@kaiomagalhaes.com"
+url-pretty: "http://kaiomagalhaes.com"
 
 # --- Misc --- #
 
