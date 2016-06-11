@@ -7,7 +7,8 @@ subtitle: Why you'd want to go on a date with me
 My name is Kaio Magalhães. I have the following qualities:
 
 - I rock a great mustache
-- I'm extremely loyal to my family
+- I know some good jokes
+- I do an awesome sandwich
 
 What else do you need?
 
