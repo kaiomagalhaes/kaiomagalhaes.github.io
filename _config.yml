@@ -26,7 +26,7 @@ footer-links-active:
   email: true
   twitter: true
   github: true
-  linkedin: false
+  linkedin: true
   stackoverflow: false
 
 url-pretty: "me@kaiomagalhaes.com"  # eg. "deanattali.com/beautiful-jekyll"
