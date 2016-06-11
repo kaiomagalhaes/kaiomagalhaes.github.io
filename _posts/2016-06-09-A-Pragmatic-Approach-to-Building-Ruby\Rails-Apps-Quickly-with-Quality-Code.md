@@ -1,4 +1,5 @@
 ---
+title: paçoca
 canonical: http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code
 ---
 
