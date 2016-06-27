@@ -15,7 +15,7 @@ What else do you need?
 ### my history
 
 I've started as a software developer after two years doing Biological
-Ciences. I was born to be a crazy cientist ( I discovered it when I was
+Sciences. I was born to be a crazy cientist ( I discovered it when I was
 6 ), but I'm just too stuborn to just accept how things are, so I
 decided to be a Software Engineer instead and here I am.
 
