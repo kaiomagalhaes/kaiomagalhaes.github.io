@@ -1,3 +1,7 @@
+---
+canonical: http://www.codelitt.com/blog/docker/
+---
+
 Since the [beginning of the time](https://upload.wikimedia.org/wikipedia/commons/c/c2/Lambda-Cold_Dark_Matter,_Accelerated_Expansion_of_the_Universe,_Big_Bang-Inflation.jpg) (Disclaimer: possibly not an accurate timeline), we have been suffering from the *'But it's working in my machine'* curse. It happens because we are probably not going to deploy the application in our local machine. Our local machine usually happens to be different than the production one. It can be different in lots of ways e.g: operational system, environment variables, installed dependencies and the list continues. 
 
 To minimize this problem here at [Codelitt](http://codelitt.com) we develop and deploy our applications inside docker containers. It started as a bit of a grassroots movement among employees, but the movement has really taken hold. From simple Jekyll pages, to frontend clients, to blue-green deployment for services, we've Dockerized **everything**.
