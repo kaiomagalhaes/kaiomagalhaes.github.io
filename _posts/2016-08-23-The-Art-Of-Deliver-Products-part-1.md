@@ -6,9 +6,9 @@ Now let's make some things clear, the final product that he had in mind could be
 
 When I started asking the questions that mattered most things got a little hot.
 
-1. Do you really need *EVERYTHING* from the final product to validate your idea?
+1 - Do you really need *EVERYTHING* from the final product to validate your idea?
 
-  For me this is the most important question about a soon to be product. We have the tendency to think that we can't validate an idea without having all of it done, then we spend tons of money just to see that after all it was not soo good. Another good thing about entering partially is that once we can meet some potential clients they can give their feedback which is gold.
+For me this is the most important question about a soon to be product. We have the tendency to think that we can't validate an idea without having all of it done, then we spend tons of money just to see that after all it was not soo good. Another good thing about entering partially is that once we can meet some potential clients they can give their feedback which is gold.
   
   At this moment you need to answer the following question: `Can you enter partially in the market?`
 
