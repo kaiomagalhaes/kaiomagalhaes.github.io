@@ -12,13 +12,13 @@ For me this is the most important question about a soon to be product. We have t
   
   At this moment you need to answer the following question: `Can you enter partially in the market?`
 
-2. Do you have the money to build all of it?
+2 - Do you have the money to build all of it?
 
   Because of the lack of knowledge some people tend to believe that a piece of software is cheap. They forget that developers need to be paid as well as other things like servers, email services, merchandising and so on.
 
   A recurring teory is that if you have an idea someone is going to put their money into it. If you check most of the startup pitch presentations you are going to notice that most of the time the investment is made in person/execution and that the idea is just something in the middle of it.
   
-3. How do you plan to enter in the market?
+3 - How do you plan to enter in the market?
 
   For some people it is hard to believe that an application doesn't just appear in front of the end user and he loves it. It has to be seen somewhere, someone needs to say that it is good. A software that isn't seen by people who may want it isn't going to be used by the ones who don't even know that it exists.
   
