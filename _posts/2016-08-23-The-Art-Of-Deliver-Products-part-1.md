@@ -28,4 +28,4 @@ Now the answers that he gave me:
 2. No, but I can get people to invest.
 3. Not yet, but it is going to be worked out as soon as we have the product to show to some potential clients
 
-Not good ones as you may notice. In the next part of the post I'm going to show how to start and deliver a product.
+Not good ones as you may notice. In the next part of the post I'm going to show how to approach the product definition and how manage the product delivery.
