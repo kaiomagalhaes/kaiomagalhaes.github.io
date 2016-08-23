@@ -10,7 +10,7 @@ When I started asking the questions that mattered most things got a little hot.
 
 For me this is the most important question about a soon to be product. We have the tendency to think that we can't validate an idea without having all of it done, then we spend tons of money just to see that after all it was not soo good. Another good thing about entering partially is that once we can meet some potential clients they can give their feedback which is gold.
   
-  At this moment you need to answer the following question: `Can you enter partially in the market?`
+  At this moment you need to answer the following question: *Can you enter partially in the market?*
 
 2 - Do you have the money to build all of it?
 
