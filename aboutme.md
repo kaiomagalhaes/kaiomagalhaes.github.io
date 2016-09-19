@@ -9,7 +9,7 @@ My name is Kaio Magalhães. I have the following qualities:
 - I rock a great mustache
 - I know some good jokes
 - I do an awesome sandwich
-- Some people say that I`m a good programmer, I`m searching for these people, if you know someome let me know
+
 
 What else do you need?
 
