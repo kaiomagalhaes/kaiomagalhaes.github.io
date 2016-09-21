@@ -74,15 +74,16 @@ Can we call the first one an MVP? No, because it isn’t viable to test your ide
 Now let’s use a real life example.
 ![cartoon](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/image05.jpg)
 
-
 **WhatsApp milestones:**
-February 2009 - Can send messages.
-December 2009 - Can send images
-February 2014 - Added the phone calls
-January 2015 - Web version available for Android 
-August 2015 - Web version available for iPhone
-March 2016 -  Send PDF files
-August 2016 - Send gifs enters in beta stage, Yeah…. gifs
+
+1. February 2009 - Can send messages.
+2. December 2009 - Can send images
+3. February 2014 - Added the phone calls
+4. January 2015 - Web version available for Android 
+5. August 2015 - Web version available for iPhone
+6. March 2016 -  Send PDF files
+7. August 2016 - Send gifs enters in beta stage, Yeah…. gifs
+
 
 They focused on the things delivered on their main value proposition instead of creating a full product vision right from the get go. WhatsApp is a messenger, so first it needs to send messages.Everything else is something to add to that main functionality. Most of the time your competitors are going to have your main feature plus some additional ones, so it is not only about getting into the market, but about continually improving to maintain your market share.
 
