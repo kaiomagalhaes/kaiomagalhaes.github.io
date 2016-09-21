@@ -6,7 +6,7 @@ Software engineering is a cursed profession. Why? Because of the _moment_:
 
 The moment when you tell someone what you do, and that big smile creeps across their face. They are actually looking for an engineer, they say, because they have a great idea --- no, an incredible idea! One that can make millions! “If we capture only 1% of the market….” Somehow, they find the generosity in their hearts to offer a full 5% of their glorious company for the small task of building it. “Non voting shares, of course.” They truly believe that an idea is all it takes to build a company, but that couldn’t be further from the truth. 
 
-Last week a friend asked me for a meeting because he wanted to talk about a big idea that was <insert your big idea here>. He kept saying that his parents and that one friend from college had told him that it was great and he could make a lot of money from it. This is where I start getting excited, because if those people said that,  I know the idea is destined for success. </sarcasm>
+Last week a friend asked me for a meeting because he wanted to talk about a big idea that was "insert your big idea here". He kept saying that his parents and that one friend from college had told him that it was great and he could make a lot of money from it. This is where I start getting excited, because if those people said that,  I know the idea is destined for success. </sarcasm>
 
 ![XKCD - https://www.xkcd.com/1721/](http://imgs.xkcd.com/comics/business_idea.png)
 *[Credit XKCD](https://www.xkcd.com/1721/)* 
@@ -27,7 +27,7 @@ A recurring theory is that if you have an idea, someone is going to put their mo
 
 3 - How do you plan to enter the market?
 
-I once asked a would-be entrepreneur his marketing strategy for an app he were pitching me. The entrepreneur stared at me incredulously and said “The App Store”. For some people, it’s hard to believe that an app doesn't magically appear in front of end users and on the front page of TechCrunch. Software that isn’t seen by those who need it, isn’t used. It resides somewhere between the 16th page of Google and the entrepreneurs broken heart also called the internet’s blackhole. You must have a plan for distribution. This isn’t Field of Dreams.
+I once asked a would-be entrepreneur his marketing strategy for an app he was pitching me. The entrepreneur stared at me incredulously and said “The App Store”. For some people, it’s hard to believe that an app doesn't magically appear in front of end users and on the front page of TechCrunch. Software that isn’t seen by those who need it, isn’t used. It resides somewhere between the 16th page of Google and the entrepreneurs broken heart also called the internet’s blackhole. You must have a plan for distribution. This isn’t Field of Dreams.
 
 As I spoke with my friend and asked him these questions, here are the answers he gave me in order:
 
@@ -47,7 +47,7 @@ First you need to validate it internally as something that may be worth your tim
 
 The Idea Canvas gives you a high level view of your idea, and helps get your thoughts around it on paper. Often when starting, we'll have several of these for various ideas and approaches for the product.
 
-If the idea still seems valuable to you after filling out the canvas, then it’s time flesh things out a bit more and eventually validate it in the market. 
+If the idea still seems valuable to you after filling out the canvas, then it’s time to flesh  things out a bit more and eventually validate it in the market. 
 
 The best way to flesh out your business model is by using the well-known lean startup method. It explains how a basic business model is defined and the steps required to take action on it. A good way put it all onto one page is to use the Lean Canvas:
 
@@ -74,6 +74,7 @@ Can we call the first one an MVP? No, because it isn’t viable to test your ide
 Now let’s use a real life example.
 ![cartoon](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/image05.jpg)
 
+
 **WhatsApp milestones:**
 
 1. February 2009 - Can send messages.
@@ -83,7 +84,6 @@ Now let’s use a real life example.
 5. August 2015 - Web version available for iPhone
 6. March 2016 -  Send PDF files
 7. August 2016 - Send gifs enters in beta stage, Yeah…. gifs
-
 
 They focused on the things delivered on their main value proposition instead of creating a full product vision right from the get go. WhatsApp is a messenger, so first it needs to send messages.Everything else is something to add to that main functionality. Most of the time your competitors are going to have your main feature plus some additional ones, so it is not only about getting into the market, but about continually improving to maintain your market share.
 
