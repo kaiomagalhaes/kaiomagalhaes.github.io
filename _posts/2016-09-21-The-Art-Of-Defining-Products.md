@@ -1,5 +1,5 @@
 ---
-canonical: http://www.codelitt.com/blog/intro-setting-up-your-first-docker-container-your-rails-app/
+canonical: http://www.codelitt.com/blog/the-art-of-defining-products/
 ---
 
 Software engineering is a cursed profession. Why? Because of the _moment_.
