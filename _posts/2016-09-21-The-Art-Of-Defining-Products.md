@@ -1,3 +1,7 @@
+---
+canonical: http://www.codelitt.com/blog/intro-setting-up-your-first-docker-container-your-rails-app/
+---
+
 Software engineering is a cursed profession. Why? Because of the _moment_.
 
 The moment when you tell someone what you do, and that big smile creeps across their face. They are actually looking for an engineer, they say, because they have a great idea. No, an incredible idea. One that can make millions. “If we capture only 1% of the market….” Somehow, they find the generosity in their hearts to offer a full 5% of their glorious company for the small task of building it. “Non voting shares, of course.” They truly believe that an idea is all it takes to build a company, but that couldn’t be further from the truth. 
