@@ -5,7 +5,7 @@ canonical: http://www.codelitt.com/blog/the-art-of-building-products/
 
 In my [last article](http://www.codelitt.com/blog/the-art-of-defining-products/), we talked about The art of defining products, which is your first step in the journey of having your product in the market (AKA fulfilling your dream). After you have your MVP defined you need to build it, otherwise it’s going to be just another idea sent to the 4th dimension (alongside your favorite pens and car keys).
 
-Our team has collectively built hundreds of products. This is how we do it here at Codelitt.
+Our team has collectively built hundreds of products. This is how we do it here at [Codelitt](codelitt.com).
 
 First off, you need to keep in mind a simple but important concept: [products evolve](https://img.buzzfeed.com/buzzfeed-static/static/2014-07/17/16/enhanced/webdr04/anigif_enhanced-11135-1405627535-2.gif). No, I’m not talking about the changes made between the first and the second version released into the market; I’m talking about what you define before you start building it and what you want to be released. 
 Let’s use a house as an example:
