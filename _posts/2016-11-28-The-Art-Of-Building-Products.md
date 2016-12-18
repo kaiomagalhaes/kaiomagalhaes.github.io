@@ -3,7 +3,7 @@ canonical: http://www.codelitt.com/blog/the-art-of-building-products/
 ---
 
 
-In my [last article](http://www.codelitt.com/blog/the-art-of-defining-products/), we talked about The art of defining products, which is your first step in the journey of having your product in the market (AKA fulfilling your dream). After you have your MVP defined you need to build it, otherwise it’s going to be just another idea sent to the 4th dimension (alongside your favorite pens and car keys).
+In my [last article](http://kaiomagalhaes.com/2016-09-21-The-Art-Of-Defining-Products/), we talked about The art of defining products, which is your first step in the journey of having your product in the market (AKA fulfilling your dream). After you have your MVP defined you need to build it, otherwise it’s going to be just another idea sent to the 4th dimension (alongside your favorite pens and car keys).
 
 Our team has collectively built hundreds of products. This is how we do it here at [Codelitt](codelitt.com).
 
