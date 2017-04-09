@@ -1,5 +1,6 @@
 ---
 canonical: http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/
+subtitle: Good ruby gems to improve your code quality and performance
 ---
 
 (This post appeared first [here](http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/))

@@ -120,4 +120,3 @@ prose:
 
 gems:
   - jekyll-paginate
-  - jekyll-minifier
