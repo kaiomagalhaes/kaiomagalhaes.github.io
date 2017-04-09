@@ -4,7 +4,7 @@ subtitle: A tutorial about how to setup your first docker container for your rai
 ---
 
 
-Since the [beginning of the time](https://upload.wikimedia.org/wikipedia/commons/c/c2/Lambda-Cold_Dark_Matter,_Accelerated_Expansion_of_the_Universe,_Big_Bang-Inflation.jpg) (Disclaimer: possibly not an accurate timeline), we have been suffering from the *'But it's working in my machine'* curse. It happens because we are probably not going to deploy the application in our local machine. Our local machine usually happens to be different than the production one. It can be different in lots of ways e.g: operational system, environment variables, installed dependencies and the list continues. 
+Since the [beginning of the time](https://upload.wikimedia.org/wikipedia/commons/c/c2/Lambda-Cold_Dark_Matter,_Accelerated_Expansion_of_the_Universe,_Big_Bang-Inflation.jpg) (Disclaimer: possibly not an accurate timeline), we have been suffering from the *'But it's working in my machine'* curse. It happens because we are probably not going to deploy the application in our local machine. Our local machine usually happens to be different than the production one. It can be different in lots of ways e.g: operational system, environment variables, installed dependencies and the list continues.
 
 To minimize this problem here at [Codelitt](http://codelitt.com) we develop and deploy our applications inside docker containers. It started as a bit of a grassroots movement among employees, but the movement has really taken hold. From simple Jekyll pages, to frontend clients, to blue-green deployment for services, we've Dockerized **everything**.
 
@@ -13,21 +13,21 @@ To minimize this problem here at [Codelitt](http://codelitt.com) we develop and 
 For those not terribly family with Docker, you can read more on their [site](https://www.docker.com/what-docker), but from the horses mouth:
 
 ```
-Docker containers wrap up a piece of software in a complete filesystem that 
-contains everything it needs to run: code, runtime, system tools, 
-system libraries – anything you can install on a server. This guarantees that it 
+Docker containers wrap up a piece of software in a complete filesystem that
+contains everything it needs to run: code, runtime, system tools,
+system libraries – anything you can install on a server. This guarantees that it
 will always run the same, regardless of the environment it is running in.
 ```
 
 There are many benefits of Docker, but what has always stood out to us is the fact **"it will always run the same on any machine"**. It is like a salve in our old wounds. That ghost of "It works on my machine" fades away and we can focus on things that matter.
 
-We wanted to explain how we develop and setup our applications to production with Docker. We have a set of best practices and have automated our deployment and implemented [blue-green deploys](http://martinfowler.com/bliki/BlueGreenDeployment.html) with it, but in this first article we're going to cover getting Dockerfiles setup for a project. Dockerfiles are just a set of instructions which build the system in a predictable and repeatable way across engineers' machines (and production machines).  
+We wanted to explain how we develop and setup our applications to production with Docker. We have a set of best practices and have automated our deployment and implemented [blue-green deploys](http://martinfowler.com/bliki/BlueGreenDeployment.html) with it, but in this first article we're going to cover getting Dockerfiles setup for a project. Dockerfiles are just a set of instructions which build the system in a predictable and repeatable way across engineers' machines (and production machines).
 
 In this tutorial we are going use a Ruby on Rails application as example.
 
-First you need to [install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04). It's straight forward enough so we'll not cover that for now. 
+First you need to [install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04). It's straight forward enough so we'll not cover that for now.
 
-All of our applications have at least one Docker container, which has all the necessary information to build it -- most have a few. Docker really becomes powerful when you start to use a container per process. It separates concerns, allows for great scalability, agility, resilience, and speed. Containers can be easily coordinated with Docker Compose, but we'll cover that in another article. For now let's setup two Dockerfiles. One for development and one for prod 
+All of our applications have at least one Docker container, which has all the necessary information to build it -- most have a few. Docker really becomes powerful when you start to use a container per process. It separates concerns, allows for great scalability, agility, resilience, and speed. Containers can be easily coordinated with Docker Compose, but we'll cover that in another article. For now let's setup two Dockerfiles. One for development and one for prod
 
 #### Development
 
@@ -117,7 +117,7 @@ production:
   database: <%= ENV['MYAPP__DATABASE_NAME'] %>
 ```
 
-Note that we have setup the password in the command: 
+Note that we have setup the password in the command:
 
 ```
 -e MYAPP_DATABASE_PASSWORD=postgres \
@@ -172,10 +172,10 @@ As it is a Rails application you'll need to change the **SECRET_KEY_BASE** to an
 
 If you are using UFW in your server [(like we recommend)](http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/) you should take a look at this [Docker documentation](https://docs.docker.com/engine/installation/linux/ubuntulinux/#enable-ufw-forwarding) as well.
 
-Build the container and there is your application running in production. 
+Build the container and there is your application running in production.
 
 #### Summary
 
-Now that you know the basics of Docker you are able to develop in a near identical environment as your production environment. We'll be following up on this article with follow ups on Docker compose to coordinate microservices, Docker blue-green deployment, how we do one command deploys, and how to secure Docker containers. In the mean time, take a look at our aforementioned server security article or [our pragmatic approach to building quality and secure Rails apps](www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/). We explain how to improve security, code smell, and code quality for ruby/rails applications. 
+Now that you know the basics of Docker you are able to develop in a near identical environment as your production environment. We'll be following up on this article with follow ups on Docker compose to coordinate microservices, Docker blue-green deployment, how we do one command deploys, and how to secure Docker containers. In the mean time, take a look at our aforementioned server security article or [our pragmatic approach to building quality and secure Rails apps](www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/). We explain how to improve security, code smell, and code quality for ruby/rails applications.
 
 We're making a big push to externalize our processes and best practices, if you're interested in learning more take a look at our [repository](https://github.com/codelittinc/incubator-resources). We open source all of our policies and best practices as well as continue to add to them there.
