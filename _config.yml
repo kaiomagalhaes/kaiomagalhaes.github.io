@@ -114,7 +114,18 @@ prose:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
+assets:
+  digest: true
+  compress:
+    css: true
+    js: true
+  sources:
+    - _assets/css
+    - _assets/fonts
+    - _assets/img
+    - _assets/js
 
 gems:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-assets

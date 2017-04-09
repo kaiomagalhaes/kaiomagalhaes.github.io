@@ -6,25 +6,26 @@
   {% if page.canonical %}
     <link rel="canonical" href="{{ page.canonical }}" />
   {% endif %}
+
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
 
   {% if page.subtitle %}
-  <meta name="description" content="{{ page.subtitle }}">
+    <meta name="description" content="{{ page.subtitle }}">
   {% endif %}
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
   {% if layout.common-ext-css %}
-    {% for css in layout.common-ext-css %}
-      <link rel="stylesheet" href="{{ css }}" />
+    {% for style in layout.common-ext-css %}
+		  {% css {{style}} %}
     {% endfor %}
   {% endif %}
 
   {% if layout.common-css %}
-    {% for css in layout.common-css %}
-      <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
+    {% for style in layout.common-css %}
+		  {% css {{style}} %}
     {% endfor %}
   {% endif %}
 
