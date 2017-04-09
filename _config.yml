@@ -83,9 +83,7 @@ prose:
     - _config.yml
     - /_layouts
     - /_includes
-    - /css
-    - /img
-    - /js
+    - /_assets
   metadata:
     _posts:
       - name: "layout"
