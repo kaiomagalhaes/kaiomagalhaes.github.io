@@ -9,7 +9,7 @@ My name is Kaio Magalhães. I have the following qualities:
 - I rock a great mustache
 - I know some good jokes
 - I do an awesome sandwich
-
+- I breakdance fight
 
 What else do you need?
 
@@ -17,8 +17,8 @@ What else do you need?
 
 I've started as a software developer after two years doing Biological
 Sciences. I was born to be a crazy scientist ( I discovered it when I was
-6 ), but I'm just too stuborn to just accept how things are, so I
-decided to be a Software Engineer instead and here I am.
+6 ), but I'm too stuborn to accept how things are, so I
+decided to be a Software Engineer and that was when I my disruption work started.
 
 I got a bachelor in Software Engineering in the [Universidade Federal de
 Goiás](https://www.ufg.br/) in 2016.
@@ -31,12 +31,12 @@ to find a way to make this process better.
 
 My first software never went to production because three months after I
 drop out from that college and from the University only to enter again,
-but for Software Engineer this time.
+but for a Software Engineer Bachelor this time.
 
 By then I've worked with a lot of projects in a lot of different
-languages like PHP, C#, Java, Groovy and Ruby.
+languages like PHP, C#, Java, Javascript, Groovy and Ruby.
 
-With a lot of frameworks like: Grails, Rails and NodeJS.
+With a lot of frameworks like: Grails, Rails, React and NodeJS.
 
 For a lot of plataforms like: Desktop, WEB, Android and Hololens.
 
