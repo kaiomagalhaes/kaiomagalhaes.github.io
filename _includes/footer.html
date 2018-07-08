@@ -53,6 +53,19 @@
             </a>
           </li>
           {% endif %}
+		  {% if site.author.resumeDriveId and site.footer-links-active.resume %}
+          <li>
+            <a
+              href="https://drive.google.com/uc?export=download&id={{ site.author.resumeDriveId }}"
+              title="Resume"
+              >
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-address-card fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
 		  {% if site.author.stackoverflow and site.footer-links-active.stackoverflow %}
           <li>
             <a href="https://stackoverflow.com/users/{{ site.author.stackoverflow }}" title="StackOverflow">
