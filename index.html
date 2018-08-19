@@ -1,18 +1,64 @@
 ---
-layout: page
-title:  A Software Engineer personal page
-subtitle: Not so random thoughts from Software engineer. Here I talk about technology in general, good practices and patterns.
+layout: minimal
 ---
-
-<div class="posts-list">
-  {% for post in site.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-
-    <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-   </article>
-  {% endfor %}
+<div id="title-header">
+  <h1> Hello, </h1>
+  <ul id="contact-list">
+    <li>
+      <a href="https://github.com/{{ site.author.github }}" title="GitHub">
+        <span class="contact-item fa-stack fa-lg">
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:{{ site.author.email }}" title="Email me">
+        <span class="contact-item fa-stack fa-lg">
+          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/{{ site.author.linkedin }}" title="LinkedIn">
+        <span class="contact-item fa-stack fa-lg">
+          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://drive.google.com/uc?export=download&id={{ site.author.resumeDriveId }}"
+        title="Resume"
+        >
+        <span class="contact-item fa-stack fa-lg">
+          <i class="fa fa-address-card fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  </ul>
 </div>
+<p>My name is Kaio Magalhaes</p>
+
+<p>
+  In the past six years, I've been in an awesome products building streak. I created a native mobile application that would make use of AI processing, an SSO with a lot of third-party integrations with zero downtime, an AR application in which the user can interact with real state buildings, a social network for bars, an application to share sensitive informations with encryption, a few Rails/React applications, a few Rails/GO API's, a few ruby libraries.
+</p>
+
+<p>
+  During this same time, I also was able to create CD/CI pipelines, secured servers, mentor Junior/Senior developers, lead projects and lead teams.
+  </p>
+  <p> You can also be interested in <a class="common-link" href="/aboutme"> my story </a> </p>
+
+
+    <span id="checkout-articles"> Check out my latest articles </span>
+    <ul class="">
+      {% for post in site.posts %}
+        <li class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <span class="post-title">{{ post.title }}</span>
+          </a>
+          <span class="post-meta">
+            - posted on {{ post.date | date: "%B, %Y" }}
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
