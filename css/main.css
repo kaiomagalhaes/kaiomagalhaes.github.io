@@ -393,7 +393,7 @@ table tr td :last-child {
 #minimal {
   background: #fafafa;
   color: #666;
-  padding: 5% 10%;
+  padding: 2% 10%;
 }
 
 #minimal h1 {
@@ -402,6 +402,13 @@ table tr td :last-child {
   font-family: 'Raleway';
   font-weight: 700;
   color: #36a9e0;
+
+  transition-duration: 2s;
+    transition-property: transform;
+}
+
+#minimal h1:hover {
+  transform: rotate(12deg);
 }
 
 #minimal p, #minimal #checkout-articles {
@@ -435,7 +442,7 @@ table tr td :last-child {
 }
 
 #minimal #title-header h1{
-  margin-bottom: 0px;
+  margin: 0;
 }
 
 #minimal #checkout-articles {
