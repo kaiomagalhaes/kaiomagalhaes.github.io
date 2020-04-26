@@ -145,13 +145,13 @@ $sidebar-display: "sidebar-display";
         >li.active:nth-child(#{$i}),
         >li.nav-item:nth-child(#{$i}):hover {
           ~li:last-child::after {
-            @include fix-cursor($top);
+ //           @include fix-cursor($top);
           }
         }
       } @else {
         >li.active:nth-child(#{$i}):last-child::after,
         >li.nav-item:nth-child(#{$i}):last-child:hover::after {
-          @include fix-cursor($top);
+//          @include fix-cursor($top);
         }
       }
 
@@ -1356,9 +1356,9 @@ table {
   }
 
   #profile-wrapper {
+    align-items: center;
     margin-top: 4rem;
     margin-bottom: 3rem;
-    padding-left: 18%;
     -ms-flex-direction: column!important;
   }
 
@@ -1373,7 +1373,6 @@ table {
   }
 
   .profile-text {
-    padding-left: .5rem;
     /* .d-flex */
     display: -webkit-box!important;
     display: -ms-flexbox!important;
@@ -1392,7 +1391,7 @@ table {
   }
 
   .profile-text>div {
-    text-align: left !important;
+    text-align: center !important;
     width: 100%;
   }
 
