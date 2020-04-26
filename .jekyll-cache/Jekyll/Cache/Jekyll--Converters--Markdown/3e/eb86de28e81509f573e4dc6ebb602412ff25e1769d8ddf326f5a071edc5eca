@@ -1,0 +1,2 @@
+I"\<p>Here at <a href="https://www.codelitt.com">Codelitt</a> we use NGINX as our proxy server. We used to install it on the server and run the applications with docker and docker-compose. As we strive to have a configuration that isn’t server based now we are using it a bit differently. We now install NGINX inside of a container on a server.</p>
+:ET

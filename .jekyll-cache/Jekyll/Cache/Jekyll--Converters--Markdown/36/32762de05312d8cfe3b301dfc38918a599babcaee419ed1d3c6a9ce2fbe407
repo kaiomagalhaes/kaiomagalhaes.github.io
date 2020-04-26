@@ -1,0 +1,201 @@
+I"�"<p>Here at Codelitt, our projects range from web applications to robotics to augmented reality. However, inside all of those areas, there is a very important and persistent topic: Security. When you’re thinking about security, there are a lot of factors to think about. Are we talking about server access? Information traffic? Information storage? The list goes on and on and on. Security is always top of mind for us and we just released an enterprise security product, <a href="http://www.bovedahq.com">Boveda</a>, that helps non technical people send sensitive data to others.</p>
+
+<p>Today, I’m going to talk about a really great service that we use to store sensitive data on a server. Vault, is an awesome tool to store key/values that we mainly use for our env variables like API keys and passwords. Vault has really good documentation, <a href="https://www.vaultproject.io/intro/getting-started/install.html">found here</a>. 
+Let’s learn how to setup a Linux server with Docker and Docker-compose, and utilize Vault.</p>
+
+<p>If you are setting up a new server, take a look at our <a href="https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md">server security practices</a> and remember to <em>not</em> set it up with the root admin.</p>
+
+<p>I also strongly recommend you use  <a href="https://github.com/kaiomagalhaes/incubator-resources/blob/master/best_practices/servers.md#2-factor-authentication">2factor authentication</a>. It’s a bit tricky, but it’s very worth it.</p>
+
+<p>You will need Docker and Docker-compose installed, so if you don’t have it take a look at this <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04">great tutorial</a> provided by <a href="https://www.digitalocean.com/">Digital Ocean</a>.</p>
+
+<p>We are going to set it up with the <code class="highlighter-rouge">deploy</code> user</p>
+
+<p>1 - Before start with the containers let’s setup the configuration. Put the following content in <code class="highlighter-rouge">/home/deploy/vault/vault.config</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>listener "tcp" {
+  address = "0.0.0.0:9000"
+  tls_disable = 1
+}
+
+backend "consul" {
+  address = "consul:8500"
+  path = "vault"
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>2 - As we are using Docker, the initial setup is very simple. We are going to use a Vault image, which you can find the source <a href="https://github.com/cgswong/docker-vault">here</a>. Put the following content in your <code class="highlighter-rouge">docker-compose.yml</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre>version: '2'
+services:
+  # Vault
+  consul:
+    container_name: consul
+    image: progrium/consul
+    restart: always
+    hostname: consul
+    ports:
+      - 8500:8500
+    command: "-server -bootstrap"
+
+  vault:
+    container_name: vault
+    image: cgswong/vault
+    restart: always
+    volumes:
+      - '/home/deploy/vault/vault.config:/root/vault.config'
+    ports:
+      - 8200:9000
+    environment:
+      VAULT_ADDR: 'http://0.0.0.0:9000'
+    cap_add:
+      - IPC_LOCK
+    depends_on:
+      - consul
+    command: "server -config /root/vault.config"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>We are going to use Consul as our secret back-end, you can find more info about it in the <a href="https://www.vaultproject.io/docs/secrets/consul/index.html">Vault Docs</a>.</p>
+
+<p>3 - Let’s run the containers now. run: <code class="highlighter-rouge">docker-compose up -d</code></p>
+
+<p>Congratulations! now you have Vault working!</p>
+
+<p>Now to enable it you need to follow the steps below:</p>
+
+<ol>
+  <li>enter the container with the command
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker exec -it vault bash
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>run
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vault init
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>The response should be something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre>bash-4.3# vault init
+Unseal Key 1: 6d64855dfbcd93654a191aca77e2863a568a0a6444556958837fd526511f7d5b01
+Unseal Key 2: 615ec3594ad1446ed84712d6ff570df0ead89c9a38c13a93f9b0a1286e50ed9c02
+Unseal Key 3: 5c2a239676337e6ebd36441ba2cae5de949221d49f3fd6571750324ed51a78a403
+Unseal Key 4: 0522dd3c3f4c3a5f2e2f15e53c0b3e114ff6d2e1407d0bc4093cd636702d328c04
+Unseal Key 5: 38563df303ae005f4b5e43286196d63f31bc6fafe783e700e7dc4550cb67a7b405
+Initial Root Token: 33d9d440-202e-6a0c-7cc8-ccc63aa6f66b
+
+Vault initialized with 5 keys and a key threshold of 3. Please
+securely distribute the above keys. When the Vault is re-sealed,
+restarted, or stopped, you must provide at least 3 of these keys
+to unseal it again.
+
+Vault does not store the master key. Without at least 3 keys,
+your Vault will remain permanently sealed.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now before anything else, you should save the unseal keys that you got during the last step, (as without them you can’t store or retrieve any key), and make sure to store it in a safe place where no one can access it and that you won’t lose for any reason. If you need to send them to an organizational partner you can use <a href="https://www.bovedahq.com/">Boveda</a>.</p>
+
+<p>At this point you should have Vault up and running. Let’s check it’s status. In your browser make sure to replace for your server: <code class="highlighter-rouge">http://yourserver:8200/v1/seal-status</code></p>
+
+<p>You should see the response:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>{
+  errors: [
+    "Vault is sealed"
+  ]
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Which means that it works but it is sealed, let’s unseal it.</p>
+
+<ol>
+  <li>Enter the container with the command
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker exec -it vault bash
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Run <code class="highlighter-rouge">vault unseal</code></li>
+  <li>It is going to ask for a key, you can pass any of the keys it provided to you before, for each time you need to run <code class="highlighter-rouge">vault unseal</code>, you need to do it 3 times.</li>
+</ol>
+
+<p>After the third one you will see the response:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>Sealed: false
+Key Shares: 5
+Key Threshold: 3
+Unseal Progress: 0
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Which means that now you can store and retrieve keys with safety!</p>
+
+<p>If you already have a secured server you can start saving your keys, otherwise you should go to <a href="https://www.codelitt.com/blog/nginx/">this post</a> where we teach about how to setup Nginx with free SSL and Docker.</p>
+
+<p>A good security practice for this kind of application is to limit the access to the Vault port to be open to the application that will store/fetch the keys only. In order to do this, you can either user your server application firewall (like aws) or you can run:</p>
+
+<p><code class="highlighter-rouge">iptables -I PREROUTING 1 -t mangle ! -s your_application_ip -p tcp --dport 9000 -j DROP</code></p>
+
+<p>Since most of the data that you plan to store in Vault is probably sensitive, bear in mind that a chain is as strong as its weakest link, so even with Vault if your server isn’t properly set up then your information isn’t safe.</p>
+
+:ET

@@ -1,0 +1,391 @@
+I"�5<p>Automate your deployments with CircleCI, Docker and a Linux server.
+TL;DR <a href="#soletsgo">go to the tutorial</a></p>
+
+<p>Here at Codelitt, we believe that a fast feedback loop is the best way to ensure that we deliver great products. Since the client has deep market knowledge, we want their validation through each step in the process of bringing a product to life. This feedback loop starts before development begins, and goes on until the product is delivered, with no breaks in between. Working this way allows us to minimize the time required to make further changes, as we rarely need to “go back and change everything”.</p>
+
+<p>In this tutorial, we are using AWS, but it will work with any Linux web server. First, a small description about the 3 main tools we are using:</p>
+
+<h5 id="circleci">CircleCI</h5>
+
+<p>An integration tool that allows us to spin up a deployment system with a couple clicks, no configuration needed. It offers a safe way to accomplish the four main steps of deployment:</p>
+<ol>
+  <li>Gather dependencies</li>
+  <li>Run tests</li>
+  <li>Run lint</li>
+  <li>Deploy</li>
+</ol>
+
+<h5 id="docker-compose">Docker Compose</h5>
+
+<p>Compose  is a tool for defining and running multi-container Docker applications. Currently, we are using Docker based container deployments to assure consistency between development and production environments. We’ve been using it for around two years now, and we really love it.</p>
+
+<h5 id="server">Server</h5>
+
+<p>This tutorial will work in any Linux Ubuntu 14+ servers.</p>
+
+<h3 id="so-lets-get-started">So let’s get started!</h3>
+
+<p>First, we need to prepare our CircleCI environment variables with our application specificities. Below you see the variable name and a description for each, add them in your CI project with the proper values.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre>DOCKERHUB_COMPANY_NAME
+    As we are working with docker we need it in order to prepare the application image path.
+
+DOCKER_EMAIL
+    The deploy user dockerhub email   
+
+DOCKER_PASS
+    The deploy user dockerhub password   
+
+DOCKER_USER
+    The deploy user dockerhub user   
+
+PROD_DATABASE_NAME
+    It is the name of your production app's database
+
+PROD_DATABASE_PASSWORD
+    It is the password of your production app's database
+
+PROD_DATABASE_USER
+    It is the user of your production app's database
+
+PROD_DEPLOY_HOST
+    It is the host IP of your production app's server
+
+PROD_DEPLOY_USER
+    It is the user of your production app's server
+
+PROJECT_NAME
+    Make sure to not use any spaces here, we are going to use it for the image deployments
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For continuous deployment on your server, you need to make sure that you organize the connection between CircleCI and your server. We recommend using user-key based connections, but you can use use-user password as well. If you are using the user-key one you need to add your private key to your CircleCI project, which you can learn how to do <a href="https://circleci.com/docs/github-security-ssh-keys/">here.</a></p>
+
+<p>This is all the configuration you need to do on the CI, from now on everything is done in your project files. For this tutorial we are using a Rails 5 Ruby on Rails project, which happens to be our base project and…it is open source! You can find it <a href="https://github.com/codelittinc/rails-5-base-project">here.</a></p>
+
+<p>First let’s organize the <code class="highlighter-rouge">circle.yml</code> file</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+</pre></td><td class="rouge-code"><pre>machine:
+  ruby:
+    version: '2.3.3'
+  services:
+    - docker
+dependencies:
+  pre:
+    - gem install bundler
+database:
+  override:
+    - sed -i "s/PROJECT_NAME/$PROJECT_NAME/g" config/database.ci.yml
+    - mv config/database.ci.yml config/database.yml
+    - bundle exec rake db:create db:schema:load --trace
+
+test:
+  override:
+    - bundle exec rspec
+deployment:
+  qa:
+    branch: /.*/
+    commands:
+      - cp Dockerfile.production Dockerfile
+      - cp env.example .env
+      - sed -i "s/POSTGRES_USER=/POSTGRES_USER=$QA_DATABASE_USER/g" .env
+      - sed -i "s/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=$QA_DATABASE_PASSWORD/g" .env
+      - sed -i "s/DATABASE_NAME=/DATABASE_NAME=$QA_DATABASE_NAME/g" .env
+      - docker build -t codelittinc/rails-base-project:latest .
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push codelittinc/rails-base-project:latest
+      - sed -i "s/NETWORK_NAME/$DOCKERHUB_COMPANY_NAME/g" bin/deploy.sh
+      - sed -i "s/DOCKERHUB_COMPANY_NAME/$DOCKERHUB_COMPANY_NAME/g" config/docker-compose.yml.template bin/deploy.sh
+      - sed -i "s/PROJECT_NAME/$PROJECT_NAME/g" config/docker-compose.yml.template bin/deploy.sh
+      - sed -i "s/PROJECT_NAME/$PROJECT_NAME/g" config/docker-compose.yml.template bin/deploy.sh
+      - NETWORK_NAME=QA_NETWORK_NAME DEPLOY_USER=$QA_DEPLOY_USER DEPLOY_HOST=$QA_DEPLOY_HOST VERSION=latest sh bin/deploy.sh
+
+  production:
+    tag: /version-.*/
+    commands:
+      - cp Dockerfile.production Dockerfile
+      - cp env.example .env
+      - sed -i "s/POSTGRES_USER=/POSTGRES_USER=$PROD_DATABASE_USER/g" .env
+      - sed -i "s/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=$PROD_DATABASE_PASSWORD/g" .env
+      - sed -i "s/DATABASE_NAME=/DATABASE_NAME=$PROD_DATABASE_NAME/g" .env
+      - docker build -t codelittinc/rails-base-project:$CIRCLE_TAG .
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push codelittinc/rails-base-project:$CIRCLE_TAG
+      - sed -i "s/NETWORK_NAME/$DOCKERHUB_COMPANY_NAME/g" bin/deploy.sh
+      - sed -i "s/DOCKERHUB_COMPANY_NAME/$DOCKERHUB_COMPANY_NAME/g" config/docker-compose.yml.template bin/deploy.sh
+      - sed -i "s/PROJECT_NAME/$PROJECT_NAME/g" config/docker-compose.yml.template bin/deploy.sh
+      - sed -i "s/PROJECT_NAME/$PROJECT_NAME/g" config/docker-compose.yml.template bin/deploy.sh
+      - NETWORK_NAME=QA_NETWORK_NAME DEPLOY_USER=$PROD_DEPLOY_USER DEPLOY_HOST=$PROD_DEPLOY_HOST VERSION=$CIRCLE_TAG sh bin/deploy.sh
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In this CircleCI file we are organizing the deployments based on branches. If you do any commit in any branch and push it to the remote repo, it is going to deploy to the QA server, and if you generate a tag it is going to deploy on the production server. <em>(Note: Normally for our projects, we won’t build and deploy upon every commit. We’ll set a specific branch designated as the QA branch, a specific branch as staging, and release tags go to prod.)</em></p>
+
+<p>You need to make sure that your tag name matches the branch validation: <code class="highlighter-rouge">/version-.*/</code> if you use a different pattern just change the regex.</p>
+
+<p>Another important thing to keep in mind is that you need to setup your dockerhub namespace so where you see <code class="highlighter-rouge">codelittinc/rails-base-project</code> you need to update for your own.</p>
+
+<p>Also, if you check the database section you are going to see that we use a special database.yml, which is necessary because we need to deploy with this same file, which has the following content and should be placed at <code class="highlighter-rouge">config/database.ci.yml</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre>default: &amp;default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  user: postgres
+  password: postgres
+
+development:
+  &lt;&lt;: *default
+  database: rails-base-test
+
+test:
+  &lt;&lt;: *default
+  database: rails-base-test
+
+production:
+  &lt;&lt;: *default
+  host: PROJECT_NAME-db
+  database: &lt;%= ENV['DATABASE_NAME'] %&gt;
+  password: &lt;%= ENV['POSTGRES_PASSWORD'] %&gt;
+  user: &lt;%= ENV['POSTGRES_USER'] %&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For both deployments, we generate a Docker image, which we build and push to Docker Hub ( see? here is where we are using those credentials ). After pushing the image, we run a deploy.sh file, which has the following content:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="rouge-code"><pre><span class="c">#!/usr/bin/env bash</span>
+
+<span class="nb">echo</span> <span class="s2">"inserting the image version in docker-compose template"</span>
+bash <span class="nt">-c</span> <span class="s1">'sed -i "s/DOCKERHUB_COMPANY_NAME\/PROJECT_NAME/DOCKERHUB_COMPANY_NAME\/PROJECT_NAME:$VERSION/" config/docker-compose.yml.template'</span>
+
+<span class="nb">echo</span> <span class="s2">"creating projects folder if it doesn't exist"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s1">'mkdir -p projects/PROJECT_NAME/config'</span>
+
+<span class="nb">echo</span> <span class="s2">"copying docker-compose"</span>
+scp config/docker-compose.yml.template <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span>:projects/PROJECT_NAME/config/docker-compose.yml.backend
+
+<span class="nb">echo</span> <span class="s2">"copying env file"</span>
+scp .env <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span>:projects/PROJECT_NAME/config/.env
+
+<span class="nb">echo</span> <span class="s2">"pulling latest version of the code"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s2">"docker-compose -f projects/PROJECT_NAME/config/docker-compose.yml.backend pull PROJECT_NAME"</span>
+
+<span class="nb">echo</span> <span class="s2">"creating network if needed"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s1">'if [ $(docker network ls | grep NETWORK_NAME | wc -l) -gt 0 ]; then echo "network already exists"; else docker network create NETWORK_NAME ; fi'</span>
+
+<span class="nb">echo</span> <span class="s2">"creating db network if needed"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s1">'if [ $(docker ps -a | grep PROJECT_NAME-db | wc -l) -gt 0 ]; then echo "db already exists"; else docker-compose -f projects/PROJECT_NAME/config/docker-compose.yml.backend up -d PROJECT_NAME-db ; fi'</span>
+
+<span class="nb">echo</span> <span class="s2">"starting the new version"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s1">'docker-compose -f projects/PROJECT_NAME/config/docker-compose.yml.backend up -d PROJECT_NAME'</span>
+
+<span class="nb">echo</span> <span class="s2">"create database if it doesn't exist"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s1">'docker exec PROJECT_NAME bundle exec rake db:create'</span>
+
+<span class="nb">echo</span> <span class="s2">"running migrations"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s1">'docker exec PROJECT_NAME bundle exec rake db:migrate'</span>
+
+<span class="nb">echo</span> <span class="s2">"removing old and unsed images"</span>
+ssh <span class="nv">$DEPLOY_USER</span>@<span class="nv">$DEPLOY_HOST</span> <span class="s2">"docker images --filter 'dangling=true' --format '' | xargs docker rmi"</span>
+
+<span class="nb">echo</span> <span class="s2">"success!"</span>
+
+<span class="nb">exit </span>0
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>What we did here is:</p>
+<ol>
+  <li>Prepare the environment variables</li>
+  <li>Prepare the Docker-Compose file</li>
+  <li>Deploy the app</li>
+  <li>Create the database if it doesn’t exist</li>
+  <li>Run the migrations</li>
+</ol>
+
+<p>In order to have it fully automated, we are using a Docker-Compose file template, which should be located at <code class="highlighter-rouge">config/docker-compose.yml.template</code> with the following content:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre>version: '2'
+services:
+  PROJECT_NAME:
+    container_name: PROJECT_NAME
+    image: DOCKERHUB_COMPANY_NAME/PROJECT_NAME
+    env_file:
+      - .env
+
+    ports:
+      - '3000:3000'
+
+  PROJECT_NAME-db:
+    image: postgres
+    container_name: PROJECT_NAME-db
+    env_file:
+      - .env
+
+networks:
+  default:
+    external:
+      name: DOCKERHUB_COMPANY_NAME
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>And now that you have everything set, you can go and focus on what matters, your code. This is just one possible way to automate your builds, we like it because it is simple, fast and you can test/use/adapt it for free.</p>
+
+:ET
