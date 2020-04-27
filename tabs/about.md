@@ -50,4 +50,4 @@ I love programming related topics like code quality, software engineer,
 best practices, design patterns and I write about it always that I have
 time to.
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/Where_the_Wild_Things_Are) and it will answer **all** your questions.
+To be honest, I'm having some trouble remembering right now, so why don't you check out this [blogpost](https://blog.codelitt.com/contractor-to-cto/),it will answer **all** your questions.
