@@ -1,5 +1,4 @@
 ---
-canonical: https://www.codelitt.com/blog/nginx/
 subtitle: Free SSL with docker and NGINX
 ---
 

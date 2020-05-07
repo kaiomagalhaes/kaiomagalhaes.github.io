@@ -1,5 +1,4 @@
 ---
-canonical: http://www.codelitt.com/blog/the-art-of-building-products/
 subtitle: A base path for anyone willing to spend more time on selling the product instead of in building it
 ---
 

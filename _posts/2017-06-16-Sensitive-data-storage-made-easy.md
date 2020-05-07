@@ -1,5 +1,4 @@
 ---
-canonical: https://www.codelitt.com/blog/sensitive-data-storage/
 subtitle: Sensitive data storage made easy
 ---
 

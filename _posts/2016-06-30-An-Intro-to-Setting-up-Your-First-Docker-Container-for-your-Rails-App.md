@@ -1,5 +1,4 @@
 ---
-canonical: http://www.codelitt.com/blog/intro-setting-up-your-first-docker-container-your-rails-app/
 subtitle: A tutorial about how to setup your first docker container for your rails application
 ---
 

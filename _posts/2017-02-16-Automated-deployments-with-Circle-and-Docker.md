@@ -1,5 +1,4 @@
 ---
-canonical: https://www.codelitt.com/blog/automated-deployments-with-circle-docker/
 subtitle: Automated deployments with Circle and Docker
 ---
 

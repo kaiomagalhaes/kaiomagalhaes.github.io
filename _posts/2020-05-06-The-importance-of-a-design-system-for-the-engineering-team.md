@@ -1,3 +1,7 @@
+---
+subtitle: Why is a design sistem important for an engineering team
+---
+
 During one of my recent job interviews with a frontend engineer he asked me "Will I be responsible for designing the application as well?". My first reaction was shock, "Why on earth would I ask an engineer to design an application?", but this thought was soon replaced with "I too have designed applications a long time ago". Asking an engineer to design an application is the equivalent of placing a camel on a horse race. The camel can definitely run, but you would rather regret betting on it as the winner, and will possibly end up disappointed with your underperforming camel. The moment I could find my words I explained to him that we always have a designer working alongside with the developer to guarantee the look and feel of the application.
 
 Although I would love to say that my answer was the final solution for the problem of having an engineer being responsible for design, it actually only hides another level of problem. When it comes to paying for software, it is more expensive to maintain an artifact than to build it the first time. Which doesn't make it cheaper to build at first, just worse to maintain. With that said, there are measures that can be taken to improve the maintainability and extensibility of a frontend piece. 
