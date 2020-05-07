@@ -1,4 +1,5 @@
 ---
+title: The importance of a design system for the engineering team
 subtitle: Why is a design sistem important for an engineering team
 ---
 

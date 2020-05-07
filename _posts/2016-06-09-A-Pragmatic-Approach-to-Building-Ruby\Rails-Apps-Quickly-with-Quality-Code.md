@@ -1,4 +1,5 @@
 ---
+title: A pragmatic approach to building Ruby on Rails apps quickly with quality code
 subtitle: Good ruby gems to improve your code quality and performance
 ---
 

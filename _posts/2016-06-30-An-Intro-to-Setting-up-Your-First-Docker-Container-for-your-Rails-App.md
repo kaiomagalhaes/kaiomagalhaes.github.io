@@ -1,4 +1,5 @@
 ---
+title: An intro to setting up your first docker container for your rails app
 subtitle: A tutorial about how to setup your first docker container for your rails application
 ---
 

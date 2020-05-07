@@ -1,4 +1,5 @@
 ---
+title: The art of defining products
 subtitle: A base path for anyone willing to spend your money in the product you want to sell instead of in the one that no one wants
 ---
 

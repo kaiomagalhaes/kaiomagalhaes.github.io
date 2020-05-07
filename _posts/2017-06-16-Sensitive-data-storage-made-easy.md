@@ -1,4 +1,5 @@
 ---
+title: Sensitive data storage made easy
 subtitle: Sensitive data storage made easy
 ---
 

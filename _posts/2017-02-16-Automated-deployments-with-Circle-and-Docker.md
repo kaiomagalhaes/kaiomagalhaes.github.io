@@ -1,4 +1,5 @@
 ---
+title: Automated deployments with CircleCI and Docker
 subtitle: Automated deployments with Circle and Docker
 ---
 

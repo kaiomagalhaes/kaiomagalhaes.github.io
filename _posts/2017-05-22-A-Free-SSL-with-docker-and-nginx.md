@@ -1,4 +1,5 @@
 ---
+title: Free SSL with Docker and NGINX
 subtitle: Free SSL with docker and NGINX
 ---
 
