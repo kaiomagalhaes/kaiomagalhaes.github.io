@@ -1,4 +1,4 @@
-I"ä
+I"ç
 <div id="archives" class="pl-xl-2">
 
   
@@ -15,7 +15,7 @@
         
         <span class="date day">06</span>
         <span class="date month small text-muted">May</span>
-        <a href="/posts/The-importance-of-a-design-system-for-the-engineering-team/">The Importance Of A Design System For The Engineering Team</a>
+        <a href="/posts/The-importance-of-a-design-system-for-the-engineering-team/">The importance of a design system for the engineering team</a>
       </div>
     </li>
   
@@ -35,7 +35,7 @@
         
         <span class="date day">16</span>
         <span class="date month small text-muted">Jun</span>
-        <a href="/posts/Sensitive-data-storage-made-easy/">Sensitive Data Storage Made Easy</a>
+        <a href="/posts/Sensitive-data-storage-made-easy/">Sensitive data storage made easy</a>
       </div>
     </li>
   
@@ -49,7 +49,7 @@
         
         <span class="date day">22</span>
         <span class="date month small text-muted">May</span>
-        <a href="/posts/A-Free-SSL-with-docker-and-nginx/">A Free Ssl With Docker And Nginx</a>
+        <a href="/posts/A-Free-SSL-with-docker-and-nginx/">Free SSL with Docker and NGINX</a>
       </div>
     </li>
   
@@ -63,7 +63,7 @@
         
         <span class="date day">16</span>
         <span class="date month small text-muted">Feb</span>
-        <a href="/posts/Automated-deployments-with-Circle-and-Docker/">Automated Deployments With Circle And Docker</a>
+        <a href="/posts/Automated-deployments-with-Circle-and-Docker/">Automated deployments with CircleCI and Docker</a>
       </div>
     </li>
   
@@ -83,7 +83,7 @@
         
         <span class="date day">28</span>
         <span class="date month small text-muted">Nov</span>
-        <a href="/posts/The-Art-Of-Building-Products/">The Art Of Building Products</a>
+        <a href="/posts/The-Art-Of-Building-Products/">The art of building products</a>
       </div>
     </li>
   
@@ -97,7 +97,7 @@
         
         <span class="date day">21</span>
         <span class="date month small text-muted">Sep</span>
-        <a href="/posts/The-Art-Of-Defining-Products/">The Art Of Defining Products</a>
+        <a href="/posts/The-Art-Of-Defining-Products/">The art of defining products</a>
       </div>
     </li>
   
@@ -111,7 +111,7 @@
         
         <span class="date day">30</span>
         <span class="date month small text-muted">Jun</span>
-        <a href="/posts/An-Intro-to-Setting-up-Your-First-Docker-Container-for-your-Rails-App/">An Intro To Setting Up Your First Docker Container For Your Rails App</a>
+        <a href="/posts/An-Intro-to-Setting-up-Your-First-Docker-Container-for-your-Rails-App/">An intro to setting up your first docker container for your rails app</a>
       </div>
     </li>
   
@@ -125,7 +125,7 @@
         
         <span class="date day">09</span>
         <span class="date month small text-muted">Jun</span>
-        <a href="/posts/A-Pragmatic-Approach-to-Building-Ruby-Rails-Apps-Quickly-with-Quality-Code/">A Pragmatic Approach To Building Ruby\rails Apps Quickly With Quality Code</a>
+        <a href="/posts/A-Pragmatic-Approach-to-Building-Ruby-Rails-Apps-Quickly-with-Quality-Code/">A pragmatic approach to building Ruby on Rails apps quickly with quality code</a>
       </div>
     </li>
   

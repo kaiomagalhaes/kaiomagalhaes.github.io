@@ -10,7 +10,7 @@
 
 title: Kaio Magalhães                          # the main title
 
-tagline: A Personal blog  # it will display as the sub-title
+tagline:   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Kaio Magalhães
@@ -35,6 +35,8 @@ social:
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/kaiomagalhaes
+
+resume: https://drive.google.com/file/d/1ayro_0ypLdaGUUMcHx41YuePKORrsCIR/view
 
 google_site_verification: google_meta_tag_verification # change to your verification string
 
