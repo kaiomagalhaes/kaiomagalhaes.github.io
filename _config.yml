@@ -7,10 +7,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://kaiomagalhaes.com" # the base hostname & protocol for your site
 
 author:
-  fullname: Kaio
-  github: github
-  linkedin: linkedin
-  email: example@email.com
+  fullname: Kaio Magalhães
+  github: kaiomagalhaes
+  linkedin: kaiomagalhaes
+  email: me@kaiomagalhaes.com
 
 
 # Syntax highlighting
