@@ -1,0 +1,79 @@
+I"p	<div>
+
+
+<h4 class="post-teaser__month">
+<strong>
+
+- - - - -   - - - - -
+
+</strong>
+</h4>
+<ul class="list-posts">
+
+<li class="post-teaser">
+<a href="/2020/05/06/The-importance-of-a-design-system-for-the-engineering-team.html">
+<span class="post-teaser__title">The importance of a design system for the engineering team</span>
+<span class="post-teaser__date">06 May 2020</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2020/04/26/The-importance-of-a-design-system-when-building-products.html">
+<span class="post-teaser__title">The importance of a design system when building products</span>
+<span class="post-teaser__date">26 April 2020</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2017/06/16/Sensitive-data-storage-made-easy.html">
+<span class="post-teaser__title">Sensitive data storage made easy</span>
+<span class="post-teaser__date">16 June 2017</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2017/05/22/A-Free-SSL-with-docker-and-nginx.html">
+<span class="post-teaser__title">Free SSL with Docker and NGINX</span>
+<span class="post-teaser__date">22 May 2017</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2017/02/16/Automated-deployments-with-Circle-and-Docker.html">
+<span class="post-teaser__title">Automated deployments with CircleCI and Docker</span>
+<span class="post-teaser__date">16 February 2017</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2016/11/28/The-Art-Of-Building-Products.html">
+<span class="post-teaser__title">The art of building products</span>
+<span class="post-teaser__date">28 November 2016</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2016/09/21/The-Art-Of-Defining-Products.html">
+<span class="post-teaser__title">The art of defining products</span>
+<span class="post-teaser__date">21 September 2016</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2016/06/30/An-Intro-to-Setting-up-Your-First-Docker-Container-for-your-Rails-App.html">
+<span class="post-teaser__title">An intro to setting up your first docker container for your rails app</span>
+<span class="post-teaser__date">30 June 2016</span>
+</a>
+</li>
+
+<li class="post-teaser">
+<a href="/2016/06/09/A-Pragmatic-Approach-to-Building-Ruby-Rails-Apps-Quickly-with-Quality-Code.html">
+<span class="post-teaser__title">A pragmatic approach to building Ruby on Rails apps quickly with quality code</span>
+<span class="post-teaser__date">09 June 2016</span>
+</a>
+</li>
+
+</ul>
+
+</div>
+:ET
